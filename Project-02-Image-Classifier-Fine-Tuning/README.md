@@ -1,4 +1,3 @@
-
 # Classification multi-classes de plats kenyans
 
 ## 🎯 Objectif et jeu de données

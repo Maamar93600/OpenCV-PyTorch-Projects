@@ -1,0 +1,47 @@
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+for MODEL in Config.model_names:
+
+    Model = get_resnet(
+        resnet_model_name=MODEL,
+        num_classes=Config.NUM_CLASSES,
+        fine_tune_start=Config.fine_tune_start,
+        drop=0.2
+    )
+
+    params_group = [{"params": Model.layer2.parameters(),"lr": Config.LR_layer},
+                    {"params": Model.layer3.parameters(),"lr": Config.LR_layer},
+                    {"params": Model.layer4.parameters(),"lr": Config.LR_layer},
+                    {"params": Model.fc.parameters(),"lr": Config.LR_FC}
+    ]
+
+    optimizer = optim.Adam(params=params_group,weight_decay=1e-4)
+
+    scheduler = lr_scheduler.CosineAnnealingLR(optimizer,T_max=Config.epochs_count)
+
+    log_dir = os.path.join(Config.LOG_DIR,MODEL,f"base_F{Config.fine_tune_start}_drop_M6")
+
+    os.makedirs(log_dir, exist_ok=True)
+
+    writer = SummaryWriter(log_dir=log_dir)
+
+    print(
+        f"Model: {MODEL} | "
+        f"Fine-Tune: {Config.fine_tune_start} | "
+        f"Optimizer: Adam | "
+        f"Scheduler: {scheduler.__class__.__name__}"
+    )
+
+    history = main(
+        DEVICE,
+        MODEL,
+        Model,
+        Config.fine_tune_start,
+        log_dir,
+        optimizer,
+        writer,
+        Config=Configuration(),
+        scheduler=scheduler
+    )
+
+    writer.close()
