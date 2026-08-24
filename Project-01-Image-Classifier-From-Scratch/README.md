@@ -2,6 +2,12 @@
 
 Projet de classification d'images utilisant PyTorch.
 
+Le jeu de données utilisé provient de la compétition Kaggle OpenCV – PyTorch Project 1 – Classification.
+
+**Kaggle — OpenCV PyTorch Project-1 Classification - Round 4**
+[Voir la compétition sur Kaggle](https://www.kaggle.com/competitions/open-cv-py-torch-project-1-classification-round-4/overview)
+
+
 ## Objectif
 
 Construire un modèle CNN capable de classifier des images en 3 classes :
