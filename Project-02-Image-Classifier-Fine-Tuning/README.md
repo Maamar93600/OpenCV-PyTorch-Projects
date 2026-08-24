@@ -5,6 +5,7 @@
 L'objectif de ce projet était de développer un modèle capable de classer automatiquement une image parmi 13 catégories de plats kenyans.
 
 Le jeu de données utilisé provient de la compétition Kaggle OpenCV – PyTorch Project 2 – Classification.
+
 **Kaggle — OpenCV PyTorch Project-2 Classification - Round 4**
 [Voir la compétition sur Kaggle](https://www.kaggle.com/competitions/open-cv-py-torch-project-2-classification-round-4/overview)
 
