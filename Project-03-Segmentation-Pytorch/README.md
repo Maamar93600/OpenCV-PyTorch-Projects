@@ -30,6 +30,7 @@ Cas particulier : lorsqu'une classe est absente du masque réel et du masque pr�
 ## 🔄 Préparation des données
 
 * Plusieurs résolutions d’entrée ont été testées :
+  
        256 × 256 : premières expérimentations
        384 × 384 : expérimentations suivantes et modèle final
 * Masques redimensionnés avec `INTER_NEAREST`
