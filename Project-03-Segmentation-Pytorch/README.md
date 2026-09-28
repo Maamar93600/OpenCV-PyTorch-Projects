@@ -2,6 +2,16 @@
 
 Projet de **segmentation sémantique** réalisé dans le cadre de la compétition Kaggle **OpenCV PyTorch Segmentation Project – Round 3**.
 
+**Kaggle — OpenCV PyTorch Project – Segmentation – Round 3**
+
+[Voir la compétition sur Kaggle](https://www.kaggle.com/competitions/open-cv-py-torch-segmentation-project-round-3/overview)
+
+
+Modèle entraîné — Hugging Face
+
+👉 Voir et télécharger le modèle](https://huggingface.co/Maamar93600/DeepLabV3Plus-ResNet101-Drone-Segmentation/tree/main)
+
+
 ## 🎯 Objectif
 
 Prédire une classe pour chaque pixel d’une image drone, avec **12 classes** :
