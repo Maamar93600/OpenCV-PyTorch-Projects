@@ -140,8 +140,8 @@ The `Results/` directory contains selected visual outputs from training and eval
 
 The trained YOLO26l model was also tested on video inputs.
 
-- [YOLO26l license plate detection demo](https://www.youtube.com/watch?v=X3PUhNaNzmo)
-- [License plate detection with YOLO26l](https://www.youtube.com/watch?v=FTYfAgQp3Mg)
+- [YOLO26l license plate detection demo1](https://www.youtube.com/watch?v=X3PUhNaNzmo)
+- [YOLO26l license plate detection demo2](https://www.youtube.com/watch?v=FTYfAgQp3Mg)
 
 ## 9. Repository Structure
 
